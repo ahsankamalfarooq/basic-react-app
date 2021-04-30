@@ -30,7 +30,7 @@ jobs:
         cmd: install # will run `yarn install` command
         
     - name: Build React App       #build yarn
-      run: yarn build
+      run: npm run build
       
     - name: Install Surge                       #install surge for deployment
       run: npm i --save surge --unsafe-perm=true --allow-root
