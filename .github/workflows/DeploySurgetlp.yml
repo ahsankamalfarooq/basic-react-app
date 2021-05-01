@@ -1,4 +1,6 @@
-name: Basic React App Deploy to Surge
+# This is a basic workflow to help you get started with Actions
+
+name: Basic React Apptlp Deploy to Surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -30,10 +32,10 @@ jobs:
         cmd: install # will run `yarn install` command
         
     - name: Build React App       #build yarn
-      run: npm run build
+      run: yarn build
       
     - name: Install Surge                       #install surge for deployment
-      run: yarn install --global surge
-      
+      run: npm install --global surge
+
     - name: Deploy to Surge
-      run: surge ./build basicreactlpapp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build basicreacttlp.surge.sh --token ${{ secrets.Surge_token }}
