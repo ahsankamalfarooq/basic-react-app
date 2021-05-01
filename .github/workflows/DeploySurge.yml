@@ -1,4 +1,4 @@
-name: Basic React App Deploy to Surgegfhnhgyf
+name: Basic React App Deploy to Surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -33,7 +33,7 @@ jobs:
       run: npm run build
       
     - name: Install Surge                       #install surge for deployment
-      run: npm i --save surge --unsafe-perm=true --allow-root
-
+      run: npm install --global surge
+      
     - name: Deploy to Surge
-      run: surge ./build basicrhggjhjghtffeactapp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build basicreactlpapp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
